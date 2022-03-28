@@ -2,8 +2,8 @@ import './defaultList.scss'
 import { Tabs } from 'antd'
 const { TabPane } = Tabs
 import { useRequest } from 'ahooks'
-import { getnewmusic } from '@/api'
-import { computedDuration } from '@/utils/index'
+import { getnewmusic } from 'src/api'
+import { computedDuration } from 'src/utils/index'
 import { Key, ReactChild, ReactFragment, ReactPortal } from 'react'
 
 export default function DefaultList() {

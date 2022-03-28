@@ -1,8 +1,8 @@
 import { useRequest, Link } from 'ahooks'
-import { getnewmusic, getsongList } from '@/api/index'
+import { getnewmusic, getsongList } from 'src/api/index'
 import styles from './newList.scss'
 import { ReactChild, ReactFragment, ReactPortal } from 'react';
-import { computedDuration } from '@/utils/index'
+import { computedDuration } from 'src/utils/index'
 import { Pagination } from 'antd'
 
 interface SongItem { 
@@ -46,7 +46,7 @@ function Introduce() {
           </button>
         </div>
       </div>
-      <img className={styles.contentWrapperImg} width="380" height="260" src={require('@/assets/images/ziqi.webp')} alt="" />
+      <img className={styles.contentWrapperImg} width="380" height="260" src={require('src/assets/images/ziqi.webp')} alt="" />
     </div>
   )
 }

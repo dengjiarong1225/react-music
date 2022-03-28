@@ -136,23 +136,23 @@ function SelfList() {
       <div className={styles.sideTitle}>自建歌单</div>
       <div className={styles.sideMenu}>
         <a href="#">
-          <img src={require('@/assets/images/list/1.jpg')} width="30" height="30" alt="" /> 
+          <img src={require('src/assets/images/list/1.jpg')} width="30" height="30" alt="" /> 
           我喜欢
         </a>
         <a href="#">
-          <img src={require('@/assets/images/list/2.jpg')} width="30" height="30" alt="" /> 
+          <img src={require('src/assets/images/list/2.jpg')} width="30" height="30" alt="" /> 
           默认歌单
         </a>
         <a href="#">
-          <img src={require('@/assets/images/list/3.jpg')} width="30" height="30" alt="" /> 
+          <img src={require('src/assets/images/list/3.jpg')} width="30" height="30" alt="" /> 
           周杰伦
         </a>
         <a href="#">
-          <img src={require('@/assets/images/list/4.jpg')} width="30" height="30" alt="" /> 
+          <img src={require('src/assets/images/list/4.jpg')} width="30" height="30" alt="" /> 
           邓紫棋
         </a>
         <a href="#">
-          <img src={require('@/assets/images/list/5.jpg')} width="30" height="30" alt="" /> 
+          <img src={require('src/assets/images/list/5.jpg')} width="30" height="30" alt="" /> 
           粤语
         </a>
       </div>

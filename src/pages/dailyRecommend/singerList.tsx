@@ -1,5 +1,5 @@
 import './singerList.scss'
-import { getsingerlis } from '@/api/index'
+import { getsingerlis } from 'src/api/index'
 import { useRequest } from 'ahooks'
 
 const TypeMap = {

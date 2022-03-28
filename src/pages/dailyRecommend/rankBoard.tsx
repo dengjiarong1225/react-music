@@ -1,5 +1,5 @@
 import './rankBoard.scss'
-import { getlead } from '@/api/index'
+import { getlead } from 'src/api/index'
 import { useRequest } from 'ahooks'
 
 export default function RankBoard() {
