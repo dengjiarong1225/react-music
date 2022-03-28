@@ -1,0 +1,33 @@
+
+.ant-pagination {
+  text-align: center;
+
+}
+
+.ant-pagination-item {
+  background-color: transparent;
+  border: none;
+
+  a { color: var(--inactive-color); }
+  &:hover a { color: var(--content-title-color); }
+}
+
+.ant-pagination-item-active a {
+  color: var(--content-title-color);
+}
+
+.ant-pagination-disabled .ant-pagination-item-link, .ant-pagination-disabled:hover .ant-pagination-item-link {
+  background-color: transparent;
+  border: none;
+  color: var(--content-title-color);
+}
+
+.ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link {
+  background-color: transparent;
+  border: none;
+  color: var(--content-title-color);
+
+  &:hover {
+    color: var(--content-title-color);
+  }
+}

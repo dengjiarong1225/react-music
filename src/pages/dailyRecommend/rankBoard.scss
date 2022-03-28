@@ -1,0 +1,67 @@
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: var(--theme-color);
+  padding: 40px 20px 10px 20px;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--theme-bg-color);
+}
+
+@media screen and (max-width: 510px) {
+  .content-wrapper {
+      padding: 20px;
+  }
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.apps-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.app-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 16px;
+  background-color: var(--content-bg);
+  border-radius: 14px;
+  border: 1px solid var(--theme-bg-color);
+  padding: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.app-card:hover {
+  transform: scale(1.02);
+  background-color: var(--theme-bg-color);
+}
+
+.app-card {
+  margin: 5px;
+}
+
+.songlistimg {
+  object-fit: cover;
+}
+
+.songlisttext {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 15px 0;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  color: #ebecec;
+}

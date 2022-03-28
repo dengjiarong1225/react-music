@@ -1,0 +1,27 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.title {
+  background: rgb(121, 242, 157);
+}
+
+.main-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 700px;
+  max-width: 1500px;
+  max-height: 880px;
+  height: 99vh;
+  margin: 25px auto 0;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 14px;
+  backdrop-filter: blur(20px);
+  background-color: var(--theme-bg-color);
+}
+
+

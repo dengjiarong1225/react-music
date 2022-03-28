@@ -1,0 +1,11 @@
+.content-wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  height: calc(100% - 58px);
+}
+
+.content {
+  flex: 1;
+  height: 100%;
+  overflow: auto;
+}
