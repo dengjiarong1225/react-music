@@ -1,16 +1,16 @@
-import styles from './index.scss';
+import './index.scss';
 import BaseBackground from './components/baseBackground';
 import LayoutTop from './components/layoutTop';
-import { ReactChild, ReactFragment, ReactPortal } from 'react';
+import { FirstRoute } from 'src/routes/index'
 
-export default function IndexPage(props: { children: ReactChild | ReactFragment | ReactPortal | null | undefined; }) {
+export default function IndexPage() {
   return (
-    <div className={styles.app}>
+    <div className="app">
       <BaseBackground />
 
-      <main className={styles.mainContainer}>
+      <main className="main-container">
         <LayoutTop />
-        {props.children}
+        <FirstRoute />
       </main>
     </div>
   )

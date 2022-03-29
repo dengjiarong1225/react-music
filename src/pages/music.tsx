@@ -1,13 +1,13 @@
 import './music.scss'
 import LayoutSideBar from './components/layoutSideBar'
-import { ReactChild, ReactFragment, ReactPortal } from 'react'
+import { Outlet } from 'react-router-dom'
 
-export default function Music(props: { children: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined }) {
+export default function Music() {
   return (
     <div className="content-wrap">
       <LayoutSideBar />
       <div className="content">
-        {props.children}
+        <Outlet />
       </div>
     </div>
   )

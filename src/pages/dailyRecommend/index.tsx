@@ -1,13 +1,12 @@
-import { ReactChild, ReactFragment, ReactPortal } from 'react'
-import { NavLink } from 'ahooks'
-import styles from './index.scss'
+import { Outlet, NavLink } from 'react-router-dom'
+import './index.scss'
 
-export default function DailyRecommend(props: { children: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined }) {
+export default function DailyRecommend() {
   return (
-    <div className={styles.mainContent}>
+    <div className="mainContent">
       <TopNav />
-      <div className={styles.contentWrapper}>
-        {props.children}
+      <div className="contentWrapper">
+        <Outlet />
       </div>
     </div>
   )
@@ -15,13 +14,13 @@ export default function DailyRecommend(props: { children: boolean | ReactChild |
 
 function TopNav() {
   return (
-    <div className={styles.mainHeader}>
-      <a className={styles.menuLinkMain} href="#">每日推荐</a>
-      <div className={styles.headerMenu}>
-        <NavLink to="/music/dailyRecommend/default" activeClassName={styles.isActive}>专辑</NavLink>
-        <NavLink to="/music/dailyRecommend/rank" activeClassName={styles.isActive}>排行榜</NavLink>
-        <NavLink to="/music/dailyRecommend/singerList" activeClassName={styles.isActive}>歌手</NavLink>
-        <NavLink to="/classification" activeClassName={styles.isActive}>分类</NavLink>
+    <div className="mainHeader">
+      <a className="menuLinkMain" href="/meirituijian">每日推荐</a>
+      <div className="headerMenu">
+        <NavLink to="/music/dailyRecommend/default" className={(isActive) => isActive ? "isActive" : ' ' }>专辑</NavLink>
+        <NavLink to="/music/dailyRecommend/rank" className={(isActive) => isActive ? "isActive" : ' ' }>排行榜</NavLink>
+        <NavLink to="/music/dailyRecommend/singerList" className={(isActive) => isActive ? "isActive" : ' ' }>歌手</NavLink>
+        <NavLink to="/classification" className={(isActive) => isActive ? "isActive" : ' ' }>分类</NavLink>
       </div>
     </div>
   )

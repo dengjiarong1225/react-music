@@ -1,10 +1,10 @@
 import './defaultList.scss'
 import { Tabs } from 'antd'
-const { TabPane } = Tabs
 import { useRequest } from 'ahooks'
 import { getnewmusic } from 'src/api'
 import { computedDuration } from 'src/utils/index'
 import { Key, ReactChild, ReactFragment, ReactPortal } from 'react'
+const { TabPane } = Tabs
 
 export default function DefaultList() {
   return (
@@ -33,10 +33,12 @@ export default function DefaultList() {
 
 // 歌曲列表
 function SongList() {
-  const { data, loading, error } = useRequest(getnewmusic)
+  const { data, loading, error } = useRequest(getnewmusic())
 
   if (loading) { return <div>Loading...</div> }
-  console.log('new song...', data);
+
+  if (error) { return <div>Error....</div> }
+
 
   return (
     <ul className="search_ul">
