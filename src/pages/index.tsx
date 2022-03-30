@@ -1,4 +1,5 @@
 import './index.scss';
+import 'antd/dist/antd.css';
 import BaseBackground from './components/baseBackground';
 import LayoutTop from './components/layoutTop';
 import { FirstRoute } from 'src/routes/index'

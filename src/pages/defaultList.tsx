@@ -1,5 +1,6 @@
 import './defaultList.scss'
 import { Tabs } from 'antd'
+import { useState, useEffect } from 'react'
 import { useRequest } from 'ahooks'
 import { getnewmusic } from 'src/api'
 import { computedDuration } from 'src/utils/index'
@@ -7,18 +8,19 @@ import { Key, ReactChild, ReactFragment, ReactPortal } from 'react'
 const { TabPane } = Tabs
 
 export default function DefaultList() {
+  const [total, setTotal] = useState(0)
   return (
     <div className="content-wrapper">
       <div className="content-section">
         <div className="content-section-title">
           <h1 className="titletest1">默认列表</h1>
-          共audioInfo.length首
+          共{total}首
         </div>
       </div>
 
       <Tabs defaultActiveKey="1">
         <TabPane tab="歌曲列表" key="1">
-          <SongList />
+          <SongList setTotal={(n) => setTotal(n)} />
         </TabPane>
         <TabPane tab="MV视频" key="2">
           <MVList />
@@ -32,13 +34,17 @@ export default function DefaultList() {
 }
 
 // 歌曲列表
-function SongList() {
+function SongList(props: { setTotal: (arg0: number) => void }) {
   const { data, loading, error } = useRequest(getnewmusic())
 
   if (loading) { return <div>Loading...</div> }
 
   if (error) { return <div>Error....</div> }
-
+  props.setTotal(data.result.length)
+  
+  useEffect(() => {
+    props.setTotal(data.result.length)
+  }, [])
 
   return (
     <ul className="search_ul">

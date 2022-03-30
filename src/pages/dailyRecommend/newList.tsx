@@ -58,10 +58,12 @@ function SongList() {
 
   if (loading || !data) { return <div>Loading...</div> }
   if (error) { return <div>Error....</div> }
+  console.log('get new music...', data);
+  
   return (
     <div className="content-section">
       <div className="content-section-title">最新歌曲</div>
-      <ul className="searchUl">
+      <ul className="search-ul">
         { data.result.map((item: SongItem, index: number) => (
           <li className="adobe-product" key={index}>
             <div className="products">{item.song.album.name}</div>

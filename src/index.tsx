@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={(e: any) => console.log('dom error: ', e)}>
+    <Suspense fallback={<div>Occur Page Error</div>}>
       <BrowserRouter>
         <App />
       </BrowserRouter>

@@ -2,6 +2,7 @@
   "name": "react-music",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://yxcr-music-api.vercel.app",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
@@ -15,6 +16,7 @@
     "@types/react-dom": "^17.0.14",
     "ahooks": "^3.1.14",
     "antd": "^4.19.4",
+    "axios": "^0.26.1",
     "babel-jest": "^27.4.2",
     "babel-loader": "^8.2.3",
     "babel-plugin-named-asset-import": "^0.3.8",

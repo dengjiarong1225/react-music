@@ -12,10 +12,10 @@ export function FirstRoute() {
     <Routes>
       <Route path="/music" element={<Music />}>
         <Route index element={<DefaultList />} />
-        <Route path="/music/dailyRecommend" element={Recommend}>
-          <Route path="/music/dailyRecommend/newList" element={NewList} />
-          <Route path="/music/dailyRecommend/rankBoard" element={RankBoard} />
-          <Route path="/music/dailyRecommend/singerList" element={SingerList} />
+        <Route path="/music/dailyRecommend" element={<Recommend />}>
+          <Route index element={<NewList />} />
+          <Route path="/music/dailyRecommend/rankBoard" element={<RankBoard />} />
+          <Route path="/music/dailyRecommend/singerList" element={<SingerList />} />
         </Route>
       </Route>
     </Routes>
